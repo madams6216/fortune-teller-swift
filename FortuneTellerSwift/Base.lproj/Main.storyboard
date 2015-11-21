@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FortuneTellerSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fortune" translatesAutoresizingMaskIntoConstraints="NO" id="e7E-y4-MiM">
+                                <rect key="frame" x="8" y="310" width="304" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="hSa-sx-ric"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypz-jv-yfH">
+                                <rect key="frame" x="20" y="66" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Umu-aS-dpq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Ask"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UO4-Gp-2fa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eE-nA-KPP">
+                                <rect key="frame" x="20" y="28" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDF-Ka-8jy">
+                                <rect key="frame" x="20" y="104" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ypz-jv-yfH" firstAttribute="trailing" secondItem="4eE-nA-KPP" secondAttribute="trailing" id="9KU-LB-NXG"/>
+                            <constraint firstItem="e7E-y4-MiM" firstAttribute="centerX" secondItem="tDF-Ka-8jy" secondAttribute="centerX" id="Bvb-yj-SQr"/>
+                            <constraint firstItem="tDF-Ka-8jy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HGG-2o-F06"/>
+                            <constraint firstItem="Ypz-jv-yfH" firstAttribute="leading" secondItem="4eE-nA-KPP" secondAttribute="leading" id="LXZ-ry-GPA"/>
+                            <constraint firstItem="tDF-Ka-8jy" firstAttribute="leading" secondItem="Ypz-jv-yfH" secondAttribute="leading" id="NZs-Lu-9If"/>
+                            <constraint firstItem="Ypz-jv-yfH" firstAttribute="trailing" secondItem="tDF-Ka-8jy" secondAttribute="trailing" id="OSg-mX-3t1"/>
+                            <constraint firstItem="4eE-nA-KPP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="ZaA-rl-nQf"/>
+                            <constraint firstItem="e7E-y4-MiM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="aaY-qh-Fes"/>
+                            <constraint firstItem="Ypz-jv-yfH" firstAttribute="top" secondItem="4eE-nA-KPP" secondAttribute="bottom" constant="8" symbolic="YES" id="fuf-Sf-aId"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e7E-y4-MiM" secondAttribute="bottom" constant="8" symbolic="YES" id="tye-Xq-Yl9"/>
+                            <constraint firstItem="4eE-nA-KPP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="yYm-6y-muz"/>
+                            <constraint firstItem="tDF-Ka-8jy" firstAttribute="top" secondItem="Ypz-jv-yfH" secondAttribute="bottom" constant="8" symbolic="YES" id="zGF-k5-5g7"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="askButton" destination="Ypz-jv-yfH" id="lZV-by-ogw"/>
+                        <outlet property="askLabel" destination="8bC-Xf-vdC" id="39w-Wp-4Ve"/>
+                        <outlet property="askView" destination="e7E-y4-MiM" id="XGg-52-v18"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440" y="346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Fortune" width="556" height="417"/>
+    </resources>
 </document>
