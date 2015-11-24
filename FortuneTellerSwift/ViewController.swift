@@ -1,3 +1,7 @@
+// TODO:
+// 1.) Show placeholder text in the question text field
+// 2.) Enter key should dismiss keyboard and show answer
+
 import UIKit
 
 class ViewController: UIViewController {
